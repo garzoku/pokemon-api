@@ -38,7 +38,7 @@ public class PokemonController {
     public Map<String, Pokemon> read(@PathVariable Long id) {
         Pokemon pokemon = pokemonService
                 .findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("No pokemon with that ID"));
+                .orElseThrow(() -> new ResourceNotFoundException("Ain't no pokermon with that there ID!"));
         return createHashSingular(pokemon);
     }
 
@@ -54,7 +54,8 @@ public class PokemonController {
     public Map<String, Pokemon> update(@RequestBody Pokemon pokemon, @PathVariable Long id) {
         Pokemon updatedPokemon = pokemonService
                 .update(pokemon)
-                .orElseThrow(() -> new ResourceNotFoundException("No pokemon with that ID"));
+                .orElseThrow(
+                        () -> new ResourceNotFoundException("Damnit, there ain't no pokermon with that there ID!"));
 
         return createHashSingular(updatedPokemon);
     }
