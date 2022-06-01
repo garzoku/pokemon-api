@@ -13,7 +13,8 @@ import lombok.Data;
 @Data
 @Table(name = "pokemon")
 public class Pokemon {
-    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "name")
