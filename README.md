@@ -1,4 +1,4 @@
-Deployed Url: https://pokemon-api-exercise.herokuapp.com/
+Deployed Url:https://pokemon-api-exercise.herokuapp.com/
 
 ## Pokemon API
 
