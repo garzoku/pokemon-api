@@ -5,6 +5,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+class PokemonJunior {
+    long id;
+    String name;
+}
+
 @Service
 public class PokemonService {
     @Autowired
@@ -28,7 +33,7 @@ public class PokemonService {
         if (foundPokemon.isPresent()) {
             Pokemon updatedPokemon = foundPokemon.get();
             updatedPokemon.setName(pokemon.getName());
-            // updatedPokemon.setImageUrl(pokemon.getImageUrl());
+            updatedPokemon.setImageUrl(pokemon.getImageUrl());
 
             pokemonRepository.save(updatedPokemon);
             return Optional.of(updatedPokemon);
